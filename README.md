@@ -2,6 +2,9 @@
 
 🎮A renpy game about spending a 🌴summer by the sea🌊, 🏄 and learning to have fun. 
 
+## Install ##
+...
+
 ## cast:
 
 ## inspiration:
