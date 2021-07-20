@@ -13,6 +13,7 @@ define d = Character("Dad")
 # The game starts here.
 
 label start:
+    # Each chapter is the story.
 
     scene bg room #/images/bg room.jpg (or png)
     show eileen happy #/images/eileen happy.png
@@ -21,12 +22,15 @@ label start:
 
     call wakeup #You find out something happened
 
-    # This ends the game.
+    #
+    call breakfast #Holly takes you home for noodles
 
+    # This ends the game.
     return
 
 label drive:
     # Holly drives you home in her Dad's sports car with the top down.
+    # This is the start of the story, and the last time you see Holly...
 
     scene bg road
     with fade
@@ -52,15 +56,22 @@ label wakeup:
     scene bg room
     with fade
 
+    m "Thom you in there?\nThom?"
+    t "..."
+    m "Thom, where were you last night?\nWhat did you do after the grad dinner?"
 
-    t "Sure, but what's a \"visual novel?\""
     menu:
-       "WHAT"
-       "It's a videogame.":
+       "{i}Where did you go after the graduation dinner?{/i}"
+       "To the after party. Alex's dad drove us, it was just just out of town.":
            $x = 1
-       "It's an interactive book.":
+       "To a party just out of town.":
            $x =2
+       "Why?":
+        jump conti
 
+    m "wha??"
+
+label conti:
     m "Where were you last night?"
     t "After the graduation dinner? Alex's Dad drove Alex, Allan and I to one of the parties."
     d "I thought Allan's dad said he would drive you?"
@@ -68,6 +79,6 @@ label wakeup:
     m "Did you just go to the one party?"
     t "Yeah. I mean, I stayed there until 3 or 4..."
     m "But you didn't get home until 8."
-
     return
+
 
