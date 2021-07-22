@@ -2,17 +2,29 @@
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
+init:
+    define h = Character("Holly", color="#1e7b1e") # main character Holly Hua - real name Xiaohui
+    define t = Character("Thom", color="#008B8B") # player character Thomas Henry
 
-define h = Character("Holly") # main character Holly Hua - real name Xiaohui
-define t = Character("Thom") # player character Thomas Henry
-define m = Character("Mum")
-define z = Character("Allan") #Allan Zedeki
-define a = Character("Alex") #Alex Alaric
-define c = Character("Mrs Compte") #Year advisor
-define p = Character("Peter") #Peter Hendrix
-define x = Character("Harriet") #Harriet Gardener
-define s = Character("Stephanie") #Stephanie Hind
-define f = Character("Frank") #Frank Finlayder - guy who lives around the corner, son of Mum's friend
+    #Thom's two friends
+    define z = Character("Allan") #Allan Zedeki
+    define a = Character("Alex") #Alex Alaric
+    
+    #Teachers and Parents
+    define c = Character("Mrs Compte") #Year advisor
+    define d = Character("Dad")
+    define m = Character("Mum")
+    
+    #People in Thom and Holly's Home-room/School House
+    define p = Character("Peter") #Peter Hendrix
+    define x = Character("Harriet") #Harriet Gardener
+    define s = Character("Stephanie") #Stephanie Hind
+
+    #Other students in the grade
+    define f = Character("Frank") #Frank Finlayder - guy who lives around the corner, son of Mum's friend
+    define k = Character("Carlay") #Carlay Button Peter's old girlfriend, fashion student
+
+
 
 # The game starts here.
 
@@ -25,6 +37,7 @@ label start:
     call drive #Holly drives you home
 
     call wakeup #You find out something happened
+    call photos
 
 
     #call graduation #A ceremony for the end of Year12.
@@ -44,11 +57,8 @@ label start:
     #call mazada #Holly drives you in her dad's sportscar
     #call dreams #Holly tells you how she imagined Australia would be beachy
     #call citylights #You two walk up from the city gardens to the memorial
-    if perv <= 10:
-        call breakfast #Holly takes you to her home for noodles
-    else:
-        #call pervending #ending where Holly calls you out as a pervert
-
+    call breakfast #Holly takes you to her home for noodles
+    
     # This ends the game.
     return
 
@@ -61,21 +71,27 @@ label drive:
 
     "Just before driving you home, Holly had pulled back the soft-top roof on the little white sports car."
     h "It's nice to drive with the top town."
+    ""
     "You smiled the whole way home through the sparse morning traffic. Seeing the first shops opening, reminded you that you had been up all night."
     "As the chrisp air swirled through the cabin, you thought about how High School was now over, and you had a new friend driving you home."
     #maybe have a scene transition from the streets to the suburb
+    ""
     "Holly didn't hear you as you asked her to turn onto your street. She drove right past it still at speed."
-    "She then smiled as you, and you updated the directions."
-    "You both drove around the block. Past your Primary School, and then the empty park, before stopping out front your parents place."
-    
+    t "That was my street."
+    "She smiled as you updated the directions."
+    t "Just make a right before the school, then we'll drive around the block."
+    "She drove slowly past your old Primary School,\nand then the empty park,\nbefore stopping out front your parents place."
+    ""
     # You got out of the car.
     t "Thanks. Good morning." #you say as a good bye.
     h "Good morning." #Holly repeats.
     "Holly puts the car into gear, and then turns to tell you something..."
-    h "I wish we met earlier."
+    h "{b}I wish we met earlier.{/b}"
     t "..."
     "You didn't know how to reply. All you could do was smile."
-    "Holly smiled back and then drove off.\nBy the time she reached the end of your street, you were already inside your parent's house..."
+    "Holly smiled back and then drove off."
+    ""
+    "By the time she reached the end of your street, you were already inside your parent's house..."
 
     #You then go to bed and sleep.
 
@@ -110,6 +126,6 @@ label conti:
     m "Did you just go to the one party?"
     t "Yeah. I mean, I stayed there until 3 or 4..."
     m "But you didn't get home until 8."
-    return
+return
 
 
