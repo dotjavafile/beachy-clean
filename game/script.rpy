@@ -3,12 +3,16 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define h = Character("Holly")
-define t = Character("Thom") # main character
-define m = Character("Mum") 
-define d = Character("Dad")
-# Alex and Allan - your friends who shared a table at the school graduation dinner with you.
-# Frank - guy who lives around the corner, son of Mum's friend
+define h = Character("Holly") # main character Holly Hua - real name Xiaohui
+define t = Character("Thom") # player character Thomas Henry
+define m = Character("Mum")
+define z = Character("Allan") #Allan Zedeki
+define a = Character("Alex") #Alex Alaric
+define c = Character("Mrs Compte") #Year advisor
+define p = Character("Peter") #Peter Hendrix
+define x = Character("Harriet") #Harriet Gardener
+define s = Character("Stephanie") #Stephanie Hind
+define f = Character("Frank") #Frank Finlayder - guy who lives around the corner, son of Mum's friend
 
 # The game starts here.
 
@@ -22,8 +26,28 @@ label start:
 
     call wakeup #You find out something happened
 
-    #
-    call breakfast #Holly takes you home for noodles
+
+    #call graduation #A ceremony for the end of Year12.
+    #nothing important happens after the ceremony - you hang out with Allan
+    #call dinner #School graduation dinner. Families at the sports club function room.
+    #call photos #Year advisor calls everyone up onto the stage, and there is a photo taken. Then groups take photos - Alex, Allan and you get one.
+    #call cheongsam #You meet Holly, she is wearing a cheongsam (never noticed she had a waist comment, hear bad things...)
+    #call plans #You find out plans for the party
+
+
+    #call paddock #The party is in a paddock. Two or three big circles of people - you can chat to groups of people about a few subjects
+    #call firepit #At the firepit you try to keep warm. Soon your friends have disapeared...
+    #call longtalk #The conversation with Holly goes on, and you notice everyone else has left
+    #call skipout #Holly invites you to drive with her.
+
+
+    #call mazada #Holly drives you in her dad's sportscar
+    #call dreams #Holly tells you how she imagined Australia would be beachy
+    #call citylights #You two walk up from the city gardens to the memorial
+    if perv <= 10:
+        call breakfast #Holly takes you to her home for noodles
+    else:
+        #call pervending #ending where Holly calls you out as a pervert
 
     # This ends the game.
     return
@@ -35,18 +59,25 @@ label drive:
     scene bg road
     with fade
 
-    "Just before driving you home, Holly had pulled back the soft-top roof on the little white sports car." 
+    "Just before driving you home, Holly had pulled back the soft-top roof on the little white sports car."
+    h "It's nice to drive with the top town."
     "You smiled the whole way home through the sparse morning traffic. Seeing the first shops opening, reminded you that you had been up all night."
     "As the chrisp air swirled through the cabin, you thought about how High School was now over, and you had a new friend driving you home."
+    #maybe have a scene transition from the streets to the suburb
     "Holly didn't hear you as you asked her to turn onto your street. She drove right past it still at speed."
-    "She then smiled as you, and you updated the directions. You both drove around the block. Past your Primary School, and then the empty park always full of dumped rubbish, before stopping out front your parents place."
+    "She then smiled as you, and you updated the directions."
+    "You both drove around the block. Past your Primary School, and then the empty park, before stopping out front your parents place."
     
     # You got out of the car.
+    t "Thanks. Good morning." #you say as a good bye.
+    h "Good morning." #Holly repeats.
+    "Holly puts the car into gear, and then turns to tell you something..."
     h "I wish we met earlier."
     t "..."
     "You didn't know how to reply. All you could do was smile."
-    "Holly smiled back and then started the car. 
-    By the time she reached the end of your street, you were already inside your parent's house..."
+    "Holly smiled back and then drove off.\nBy the time she reached the end of your street, you were already inside your parent's house..."
+
+    #You then go to bed and sleep.
 
     return
 
