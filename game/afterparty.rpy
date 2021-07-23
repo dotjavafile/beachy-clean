@@ -4,6 +4,7 @@
 label going:
     #going to the afterparty
 
+    scene bg nightstreets
     "Going to the After Party"
     "It's in a Paddock east of town."
     return
@@ -12,7 +13,6 @@ label paddock:
     $ goaround = 0
 
     "The paddock is dark."
-
 
     # This party breaks down, and you need to move to another party. But there is only 1 scotter, and 2 helmets?
     #Sophie
@@ -33,6 +33,8 @@ label paddock:
 
 label house1:
     #Thom arrives at the 2nd Party
+    #ST SCOOTER splash
+    scene bg houseparty
 
     menu:
         "Who do you ask to come next?"
@@ -40,11 +42,15 @@ label house1:
             call house2
         "Ask for Allan":
             call house3
+    
+    #S SCOOTER
     return
 
 
 label house2:
     #Alex arrives
+    #SA SCOOTER
+
     if goaround >= 1:
         #If Alex arrives after Allan was sent back
         "Alex arrives..."
@@ -57,15 +63,19 @@ label house2:
         "You go back to get Allan":
             call house4
         "Send Sophie back to get Allan":
+            #S SCOOTER
             call houseB
         "Send Alex back to get Allan":
             $ goaround += 1
+            #SA SCOOTER
             call house3
     return
 
 
 label house3:
     #Allan arrives
+    #SX SCOOTER
+
     if goaround >= 1:
         #If Allan arrives after Alex was sent back
         "Allan arrives"
@@ -79,8 +89,10 @@ label house3:
         "You go back to get Alex":
             call house5
         "Send Sophie back to get Alex":
+            #S SCOOTER
             call houseA
         "Send Allan back to get Alex":
+            #SX SCOOTER
             $ goaround += 1
             call house2
     return
@@ -89,8 +101,12 @@ label house3:
 label house4:
     #You go back and get Allan to go to houseparty
     t "Sophie, I'll ride back with you to get Allan."
+    #ST SCOOTER
+
+    scene paddock
 
     "You wave to Sophie and Allan as they ride off down the driveway."
+    #SX SCOOTER
     call paddock2 #Thom gets a ride with Holly
     return
 
@@ -98,8 +114,12 @@ label house4:
 label house5:
     #You go back and get Alex to go to houseparty
     t "Sophie, I'll ride back with you to get Alex."
+    #ST SCOOTER
+
+    scene paddock
 
     "You wave to Alex and Sophie as they ride off down the driveway."
+    #SA SCOOTER
     call paddock2 #Thom gets a ride with Holly
     return
 

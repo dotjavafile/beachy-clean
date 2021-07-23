@@ -4,6 +4,9 @@
 
 label paddock2:
     #Thom gets a ride with Holly (who didn't know the way)
+
+    scene bg paddock
+
     "You look around the paddock."
     "There is now only three other people here, probably all waiting for a ride too."
     menu:
@@ -22,6 +25,8 @@ label paddock2:
 
 label mazda:
     #You give Holly directions to the party
+    
+    #MX5 SPLASH
     t "I never knew you owned such a cool car"
     h "It's my Dad's. He is away I drove it tonight."
     t "That is still pretty cool."

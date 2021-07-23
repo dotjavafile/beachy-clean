@@ -5,6 +5,7 @@ label breakfast:
     # Holly takes you back to her place for breakfast.
     # She cooks noodles, it is nice. Holly then asks you if you want to go to bed, before her mum chases you two out of the kitchen.
 
+    scene bg kitchen 
     #Holly cooks noodles, and explains Wuhan Hot Dry Noodles (Re.gan.mian).
     "Holly turned on the stove, filled a pot with water and left it to boil as she rummaged through the cupboards."
     t "What will you cook?"
@@ -22,6 +23,7 @@ label breakfast:
     "You tried to hold the chop sticks together, but the noodles kept slipping back into the bowl. But you persisted.\nEventually the sticky noodles were easier to pick up and shovel from the bowl into you mouth."
 
     #The kitchen is peaceful, you two are eating in tranquil silence...
+    scene bg kitchen2
     "The rising sun shone through the kitchen windows. Sparkling on the countertop."
     "Holly pushed her bowl forward then smiled at you."
     h "I think we should go to bed."

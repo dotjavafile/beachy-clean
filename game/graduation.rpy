@@ -2,11 +2,14 @@
 label dinner:
     #a graduation dinner
 
+
     #background of school hall?
     "High School Graduation was on a Thursday."
     "In the morning there was a ceremony in the school hall."
     ""
     #change to background of hall
+    scene bg sportsclub
+    with dissolve
     "Then in the evening there was a dinner at the Sports Club Hall."
     ""
     "Dinner was served quickly."
@@ -91,6 +94,8 @@ label presento:
     ""
     "Mrs Compte says something quietly, and then you climb the stairs to wait with the others on statge."
     ""
+
+    scene bg stage
     # The stage fills and then a photo is taken.
     c "Peter Hendrix"
     "Peter wears a cheap black suit, and his matted hair is its natural brown colour for a change."
@@ -114,16 +119,13 @@ label presento:
     "Everyone in the year (except those like Burt Thalys who didn't turn up) is now on the stage."
     c "Everyone say 2001!"
 
-    scene bg photos
-    with fade
-
+    #YEAR GROUP PHOTO with flash    
     "You all say 2001, then cheeze for the serries of photos."
-
-    scene bg photos
-    with fade
-
+    #YEAR GROUP PHOTO with flash
     ""
     c "There will now be group photos taken just behind the stage here."
+
+    scene bg photobooth
     "The girls get a group photo taken first. Whilst they get ready and the photo is taken all the guys group around and watch."
     ""
     "It takes a long few minutes for the stage to disperse."
@@ -177,6 +179,7 @@ label photos1:
     "There are a few funny faces, then a serious photo."
     ""
     with fade
+    #BOYS GROUP PHOTO 
 
     "Frank lays across the floor infront of the group."
 
@@ -199,7 +202,7 @@ label photos2:
     z "Thom, you getting a photo with the girls?"
     t "Yup. My matheamtics class."
     ""
-
+    #MATH CLASS PHOTO
 
     with fade
 
@@ -209,11 +212,11 @@ label photos2:
 
 label photos3:
     #A photo with Allan and Alex
-    #The three amigos
+
+    #THREE GROUP PHOTO
     a "Where do you think we will be in 10 years time?"
     z "Probly back here at a reunion"
 
     t "It is a pitty Burt isn't here. He booked a set on our table and didn't show up."
-
 
     return

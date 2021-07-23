@@ -24,7 +24,7 @@ init:
     define f = Character("Frank") #Frank Finlayder - guy who lives around the corner, son of Mum's friend
     define k = Character("Carlay") #Carlay Button Peter's old girlfriend, fashion student
     define v = Character("Sophie") #Sophie North - see has a scooter and will give you guys a ride to the House Party
-    define e = Character("Esmay") #Esmay Port - 
+    define e = Character("Esmay") #Esmay Port - you had Art and IT with her in year 8 and 9. But haven't spoken to her since.
 
 
 
@@ -62,11 +62,12 @@ label start:
     # This ends the game.
     return
 
+
 label drive:
     # Holly drives you home in her Dad's sports car with the top down.
     # This is the start of the story, and the last time you see Holly...
 
-    scene bg road
+    scene bg drivestreets
     with fade
 
     "Just before driving you home, Holly had pulled back the soft-top roof on the little white sports car."
@@ -82,11 +83,12 @@ label drive:
     t "Just make a right before the school, then we'll drive around the block."
     "She drove slowly past your old Primary School,\nand then the empty park,\nbefore stopping out front your parents place."
     ""
+    scene bg drivehome
     # You got out of the car.
     t "Thanks. Good morning." #you say as a good bye.
     h "Good morning." #Holly repeats.
     "Holly puts the car into gear, and then turns to tell you something..."
-    h "{b}I wish we met earlier.{/b}"
+    h "I wish we met earlier."
     t "..."
     "You didn't know how to reply. All you could do was smile."
     "Holly smiled back and then drove off."
@@ -96,14 +98,5 @@ label drive:
     #You then go to bed and sleep.
 
     return
-
-label wakeup:
-    # Wake up to news something had happened... (remember when your mum asked if you walked home from a party 10km out of town...)
-
-    scene bg room
-    with fade
-
-    ""
-return
 
 
