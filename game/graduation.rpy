@@ -1,14 +1,21 @@
 #The graduation (Thursday)
-
 label dinner:
-    #graduation dinner at Sports club with Year 12 students and families
+    #a graduation dinner
 
+    #background of school hall?
+    "High School Graduation was on a Thursday."
+    "In the morning there was a ceremony in the school hall."
+    ""
+    #change to background of hall
+    "Then in the evening there was a dinner at the Sports Club Hall."
+    ""
+    "Dinner was served quickly."
     return
 
 label photos:
     #after the meal there is a photo of everyone in the year on the stage
     #You line up alphabetically so it is Harriet Gardener, *Thomas Henry, Peter Hendrix, Stephanie Hind, Holly Hua,
-    "A little bit after the main course is served, Mrs Compte calls the students to line up at the edge of the dance floor."
+    "A little bit after the main course was cleared, Mrs Compte called the students to line up at the edge of the dance floor."
     "She gives a short speech"
     c "I will like to introduce everyone for the last time to each of the students in the year of 2001."
     c "Alex Alaric"

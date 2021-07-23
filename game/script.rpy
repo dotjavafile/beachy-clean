@@ -23,6 +23,8 @@ init:
     #Other students in the grade
     define f = Character("Frank") #Frank Finlayder - guy who lives around the corner, son of Mum's friend
     define k = Character("Carlay") #Carlay Button Peter's old girlfriend, fashion student
+    define v = Character("Sophie") #Sophie North - see has a scooter and will give you guys a ride to the House Party
+    define e = Character("Esmay") #Esmay Port - 
 
 
 
@@ -36,17 +38,15 @@ label start:
 
     call drive #Holly drives you home
 
-    call wakeup #You find out something happened
-    call photos
+    #hook to go back in time and tell the story of graduation night.
+    
+    # At the graduation dinner
+    call dinner #
+    call photos #Year advisor calls everyone up onto the stage, and there is a whole year photo and then group photos
 
-
-    #call graduation #A ceremony for the end of Year12.
-    #nothing important happens after the ceremony - you hang out with Allan
-    #call dinner #School graduation dinner. Families at the sports club function room.
-    #call photos #Year advisor calls everyone up onto the stage, and there is a photo taken. Then groups take photos - Alex, Allan and you get one.
-    #call cheongsam #You meet Holly, she is wearing a cheongsam (never noticed she had a waist comment, hear bad things...)
-    #call plans #You find out plans for the party
-
+    #At the afterparty
+    call going
+    call paddock
 
     #call paddock #The party is in a paddock. Two or three big circles of people - you can chat to groups of people about a few subjects
     #call firepit #At the firepit you try to keep warm. Soon your friends have disapeared...
@@ -103,29 +103,7 @@ label wakeup:
     scene bg room
     with fade
 
-    m "Thom you in there?\nThom?"
-    t "..."
-    m "Thom, where were you last night?\nWhat did you do after the grad dinner?"
-
-    menu:
-       "{i}Where did you go after the graduation dinner?{/i}"
-       "To the after party. Alex's dad drove us, it was just just out of town.":
-           $x = 1
-       "To a party just out of town.":
-           $x =2
-       "Why?":
-        jump conti
-
-    m "wha??"
-
-label conti:
-    m "Where were you last night?"
-    t "After the graduation dinner? Alex's Dad drove Alex, Allan and I to one of the parties."
-    d "I thought Allan's dad said he would drive you?"
-    t "..."
-    m "Did you just go to the one party?"
-    t "Yeah. I mean, I stayed there until 3 or 4..."
-    m "But you didn't get home until 8."
+    ""
 return
 
 
