@@ -33,8 +33,8 @@ init:
 label start:
     # Each chapter is the story.
 
-    scene bg room #/images/bg room.jpg (or png)
-    show eileen happy #/images/eileen happy.png
+    # scene bg room #/images/bg room.jpg (or png)
+    # show eileen happy #/images/eileen happy.png
 
     call drive #Holly drives you home
 
@@ -48,6 +48,8 @@ label start:
     call going
     call paddock
 
+    call houseparty
+    
     #call paddock #The party is in a paddock. Two or three big circles of people - you can chat to groups of people about a few subjects
     #call firepit #At the firepit you try to keep warm. Soon your friends have disapeared...
     #call longtalk #The conversation with Holly goes on, and you notice everyone else has left

@@ -25,6 +25,7 @@ label paddock:
         "Send Alex":
             call paddockA
         "Go yourself":
+            call partyway #explain the way to the party
             call house1
         "Send Allan":
             call paddockB
@@ -103,6 +104,7 @@ label house4:
     t "Sophie, I'll ride back with you to get Allan."
     #ST SCOOTER
 
+    call paddockway #tell player the way to the paddock
     scene paddock
 
     "You wave to Sophie and Allan as they ride off down the driveway."
@@ -115,6 +117,8 @@ label house5:
     #You go back and get Alex to go to houseparty
     t "Sophie, I'll ride back with you to get Alex."
     #ST SCOOTER
+
+    call paddockway #tell player the way to the paddock from party
 
     scene paddock
 
@@ -164,3 +168,4 @@ label houseB:
     "BAD end at the house"
 
     return
+ 
