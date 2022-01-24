@@ -1,25 +1,14 @@
 # beachy-clean
 
-🎮A renpy game about spending a 🌴summer by the sea🌊, 🏄 and learning to have fun. 
+🎮A renpy game.
+You play as Thom Henry, who has just graduated from High School. Throughout Graduation Night he chats with classmates, and attends a few after parties reminiscing about school and getting to know Holly Hua (a "new girl" who only arrived at school in the final year).
 
 ## Install ##
-...
 
-## cast:
+1. You will need to install [ren'py](https://www.renpy.org/latest.html).
+2. Download this repo to your games folder.
 
-## inspiration:
-* [this fun beach photo](https://www.lomography.com/tags/15408-beach/photos/12917764?order=popular)
-* [a cute woman](https://www.lomography.com/homes/ccwu/albums/2007786-13)
-* [fun at the beach](https://www.lomography.com/tags/15408-beach/photos/13724079?order=popular)
-* [sexy housemates](https://www.lomography.com/homes/japsix/photos/6122025)
-* [two girls on beach](https://www.lomography.com/homes/japsix/albums/1649801-seychelles-holga-cross/12067558)
-* [a house like this](https://www.behance.net/gallery/95221169/Cozy-hut)
-* [pixel art girl](https://i.pinimg.com/736x/0b/fd/6c/0bfd6cea7fe9219015718c7f15d83f17.jpg)
-* [learn to surf](https://purosurf.com/academy)
-* [learn to surf 2](https://www.youtube.com/watch?v=OHpG_rNj8eQ)
+3. Open **ren'py**. The game should be in the projects list as _beachy_.
+4. Select _beacy_ then Click _launch project_ (in renpy).
 
-## STATE YOUR QUEST ##
-## PLANT A QUESTION IN THE READERS MIND ##
-## TELL THE STORY OF WHAT DREW YOU TO THIS PLACE ##
-## TELL A SMALL STORY ##
-## END WITH CHANGE ##
+<!-- play online should be an option once published too -->
